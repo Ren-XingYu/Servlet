@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <!-- 使用ServletContext获取
+    <context-param>
+        <param-name>encoding</param-name>
+        <param-value>utf-8</param-value>
+    </context-param>-->
+    
+    <servlet>
+        <servlet-name>HelloServlet</servlet-name>
+        <servlet-class>x.y.servlet.HelloServlet</servlet-class>
+        <!-- 启动服务器的时候创建实例，数字越小，优先级越高
+        <load-on-startup>1</load-on-startup>-->
+        <!-- 配置初始化参数
+        <init-param>
+            <param-name>abc</param-name>
+            <param-value>xyz</param-value>
+        </init-param>-->
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>/HelloServlet</url-pattern>
+    </servlet-mapping>
+</web-app>
